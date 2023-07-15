@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Contact Us</h1>
-  </header>
-  <main>
-    <section>
-      <h2>How can we help you?</h2>
-      <ul>
-        <li>
-          <label for="">Your Name</label>
-          <input type="text">
-        </li>
-        <li>
-          <label for="">Your Email Address</label>
-          <input type="email">
-        </li>
-        <li>
-          <label for="">Your Phone Number</label>
-          <input type="number">
-        </li>
-        <li>
-          <label for="">Your Message</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-        </li>
-        <li>
-          <label for="">How did you find us?</label>
-          <select name="" id="">
-            <option value="">Web Search</option>
-            <option value="">Word of Mouth</option>
-            <option value="">Other</option>
-          </select>
-        </li>
-      </ul>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/" method="get">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="yourname">Your Name</label>
+              <input type="text" name="your-name" id="yourname" required />
+            </li>
+            <li>
+              <label for="youremail">Your Email Address</label>
+              <input type="email" name="your-email" id="youremail" required />
+            </li>
+            <li>
+              <label for="yourphone">Your Phone Number</label>
+              <input type="number" name="your-phone" id="yourphone" required />
+            </li>
+            <li>
+              <label for="yourmessage">Your Message</label>
+              <textarea
+                name="your-message"
+                id="yourmessage"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </li>
+            <li>
+              <label for="search">How did you find us?</label>
+              <select name="search" id="search">
+                <option value="web-search">Web Search</option>
+                <option value="word-of-mouth">Word of Mouth</option>
+                <option value="other">Other</option>
+              </select>
+            </li>
+          </ul>
+        </section>
 
-    <section>
-      <h2>How should we reply</h2>
-      <ul>
-        <li>
-          <input type="radio" name="" id="">
-          <label for="">Call me</label>
-        </li>
-        <li>
-          <input type="radio" name="" id="">
-          <label for="">Send me an email</label>
-        </li>
-        <li>
-          <input type="radio" name="" id="">
-          <label for="">Don't reply</label>
-        </li>
-      </ul>
-    </section>
+        <section>
+          <h2>How should we reply</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input type="radio" name="reply" id="phone-reply" />
+              <label for="phone-reply">Call me</label>
+            </li>
+            <li class="form-control-inline">
+              <input type="radio" name="reply" id="email-reply" />
+              <label for="email-reply">Send me an email</label>
+            </li>
+            <li class="form-control-inline">
+              <input type="radio" name="reply" id="no-reply" />
+              <label for="no-reply">Don't reply</label>
+            </li>
+          </ul>
+        </section>
 
-    <section>
-      <input type="checkbox" name="" id="">
-      <label for="">Agree Terms</label>
-    </section>
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" name="terms" id="agree-terms" />
+            <label for="agree-terms">Agree Terms</label>
+          </div>
+        </section>
 
-    <section>
-      <button type="reset">Clear</button>
-      <button type="submit">Submit</button>
-    </section>
-  </main>
-</body>
+        <section>
+          <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
 </html>
