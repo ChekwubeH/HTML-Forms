@@ -31,7 +31,13 @@
             </li>
             <li>
               <label for="yourphone">Your Phone Number</label>
-              <input type="number" name="your-phone" id="yourphone" required />
+              <input
+                type="tel"
+                name="your-phone"
+                id="yourphone"
+                required
+                minlength="5"
+              />
             </li>
             <li>
               <label for="yourmessage">Your Message</label>
@@ -40,11 +46,14 @@
                 id="yourmessage"
                 cols="30"
                 rows="10"
+                required
+                minlength="10"
+                maxlength="200"
               ></textarea>
             </li>
             <li>
-              <label for="search">How did you find us?</label>
-              <select name="search" id="search">
+              <label for="channel">How did you find us?</label>
+              <select name="channel" id="channel" required>
                 <option value="web-search">Web Search</option>
                 <option value="word-of-mouth">Word of Mouth</option>
                 <option value="other">Other</option>
@@ -57,15 +66,15 @@
           <h2>How should we reply</h2>
           <ul>
             <li class="form-control-inline">
-              <input type="radio" name="reply" id="phone-reply" />
+              <input type="radio" name="reply" id="phone-reply" required />
               <label for="phone-reply">Call me</label>
             </li>
             <li class="form-control-inline">
-              <input type="radio" name="reply" id="email-reply" />
+              <input type="radio" name="reply" id="email-reply" required />
               <label for="email-reply">Send me an email</label>
             </li>
             <li class="form-control-inline">
-              <input type="radio" name="reply" id="no-reply" />
+              <input type="radio" name="reply" id="no-reply" required />
               <label for="no-reply">Don't reply</label>
             </li>
           </ul>
@@ -73,14 +82,14 @@
 
         <section>
           <div class="form-control-inline">
-            <input type="checkbox" name="terms" id="agree-terms" />
+            <input type="checkbox" name="terms" id="agree-terms" required />
             <label for="agree-terms">Agree Terms</label>
           </div>
         </section>
 
-        <section>
-          <button type="reset">Clear</button>
-          <button type="submit">Submit</button>
+        <section class="btn">
+          <button type="reset" class="btn-reset">Clear</button>
+          <button type="submit" class="btn-submit">Submit</button>
         </section>
       </form>
     </main>
